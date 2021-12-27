@@ -1,0 +1,15 @@
+﻿@model WebApplication1.Models.CurrentUser
+@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "First-homepage";
+    CurrentUser userSession = Newtonsoft.Json.JsonConvert.DeserializeObject<CurrentUser>(
+        base.Context.Session.GetString("CurrentUserSession"));
+}
+<h1>First-Index</h1>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>Model:@base.Model.Name</p>
+        <p>userSession:@userSession.Name</p>
+    </div>
+</div>
