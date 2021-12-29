@@ -127,3 +127,5 @@ E:\工作准备\c#练习\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1
 E:\工作准备\c#练习\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\工作准备\c#练习\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\工作准备\c#练习\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Third\Index.cshtml.g.cs
+E:\工作准备\c#练习\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Fourth\Index.cshtml.g.cs
+E:\工作准备\c#练习\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Fourth\Info.cshtml.g.cs

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.Interface;
 using WebApplication1.Service;
+using WebApplication1.Utility.Filter;
 
 namespace WebApplication1
 {
@@ -27,9 +28,20 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSession();//该怎么使用session
-            services.AddControllersWithViews();
+            //services.AddTransient<CustomExceptionFilterAttribute>(); //ServiceFilter需要先注册
 
-            services.AddTransient<ITestServiceA, TestServiceA>();
+            services.AddControllersWithViews(
+                options =>
+                {
+                    options.Filters.Add(typeof(CustomExceptionFilterAttribute)); //全局注册--全局生效
+                }
+                );
+
+            //Ioc还可以控制对象生命周期
+            services.AddTransient<ITestServiceA, TestServiceA>();//瞬时生命周期
+            //services.AddSingleton<ITestServiceA, TestServiceA>();//单例-进程唯一实例
+            //services.AddScoped<ITestServiceA, TestServiceA>();//作用域单例一一个请求一个实例
+
         }
         //http request pipeline: http请求处理的过程
         //新型管道：套娃式
