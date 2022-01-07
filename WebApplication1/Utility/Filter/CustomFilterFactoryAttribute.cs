@@ -22,7 +22,7 @@ namespace WebApplication1.Utility.Filter
         /// <returns>返回的是一个filter</returns>
         public IFilterMetadata CreateInstance(IServiceProvider serviceProvider)
         {
-
+            return (IFilterMetadata)serviceProvider.GetService(this._FilterType);
         }
     }
 }

@@ -22,12 +22,6 @@ namespace WebApplication1
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)//创建默认builder--会完成各种配置
-                //.ConfigureLogging((context,loggingBuilder)=>
-                //{
-                //    loggingBuilder.AddFilter("System", LogLevel.Warning);
-                //    loggingBuilder.AddFilter("Microsoft", LogLevel.Warning);
-                //    loggingBuilder.AddLog4Net();
-                //})
                 .ConfigureWebHostDefaults(//指定一个web服务器-kestrel
                     webBuilder =>
                     {

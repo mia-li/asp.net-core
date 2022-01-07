@@ -10,6 +10,7 @@ namespace WebApplication1.Controllers
     //[CustomExceptionFilterAttribute]//controller注册
     //[ServiceFilter(typeof(CustomExceptionFilterAttribute))] 
     //[TypeFilter(typeof(CustomExceptionFilterAttribute))]
+    [CustomFilterFactory(typeof(CustomExceptionFilterAttribute))]
     public class FourthController : Controller
     {
         /// <summary>

@@ -28,14 +28,14 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSession();//该怎么使用session
-            //services.AddTransient<CustomExceptionFilterAttribute>(); //ServiceFilter需要先注册
+            services.AddTransient<CustomExceptionFilterAttribute>(); //ServiceFilter需要先注册
 
-            services.AddControllersWithViews(
-                options =>
-                {
-                    options.Filters.Add(typeof(CustomExceptionFilterAttribute)); //全局注册--全局生效
-                }
-                );
+            //services.AddControllersWithViews(
+            //    options =>
+            //    {
+            //        options.Filters.Add(typeof(CustomExceptionFilterAttribute)); //全局注册--全局生效
+            //    }
+            //    );
 
             //Ioc还可以控制对象生命周期
             services.AddTransient<ITestServiceA, TestServiceA>();//瞬时生命周期
